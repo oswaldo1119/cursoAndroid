@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activitys.SimpsonActivity">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageMain"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:src="@drawable/simpsons"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonLisa"
+            android:layout_width="130dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/general_btn_bg"
+            android:text="Lisa"
+            android:textColor="@android:color/white"
+            android:drawableEnd="@drawable/saxophone"
+            android:onClick="clickedSimpson"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageMain" />
+
+        <LinearLayout
+            android:id="@+id/linearMoe"
+            android:layout_width="130dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/general_btn_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:onClick="clickedSimpson"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearBart">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/moe"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/beer"
+                android:padding="9dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonHomero"
+            android:layout_width="130dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="72dp"
+            android:background="@drawable/general_btn_bg"
+            android:onClick="clickedSimpson"
+            android:text="Homero"
+            android:textColor="@android:color/white"
+            android:drawableEnd="@drawable/pig"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonLisa" />
+
+        <LinearLayout
+            android:id="@+id/linearBart"
+            android:layout_width="130dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/general_btn_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:onClick="clickedSimpson"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageMain">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bart"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/skateboard"
+                android:padding="9dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="162dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="162dp"
+            android:layout_marginBottom="8dp"
+            android:text="Simpson"
+            android:onClick="clickedSimpson"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.826" />
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">Primeros pasos</string>
+    <string name="text_string">Esto es una prueba de mi primer string</string>
+    <string name="message">Hello message</string>
+    <string name="message2">Hola que hace</string>
+    <string name="bart">BART</string>
+    <string name="moe">MOE</string>
+    <string name="homero">HOMERO</string>
+    <string name="lisa">LISA</string>
+    <string name="select">Select</string>
+    <string name="mostrar">MOSTRAR</string>
+    <string name="vivo">Vivo</string>
+    <string name="gemaText">¿Una gema aparece en su pélicula?</string>
+    <string name="faltaFrase">Te falta una frase de</string>
+    <string name="nombre">Nombre</string>
+    <string name="frase">Frase</string>
+    <string name="emailVacio">Email Vacio</string>
+    <string name="passwordVacio">Password vacio</string>
+    <string name="errorEmailInvalido">Error email invalido</string>
+    <string name="camposVacios">Campos vacios</string>
+    <string name="errorPasswordInvalido">Error password invalido</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="logout">logout</string>
+    <string-array name="country_arrays">
+        <item>México🇲🇽</item>
+        <item>Malaysia 🇲🇾</item>
+        <item>United States 🇺🇸</item>
+        <item>Indonesia 🇮🇩</item>
+        <item>France 🇫🇷</item>
+        <item>Italy 🇮🇹</item>
+        <item>Singapore 🇸🇬</item>
+        <item>New Zealand 🇳🇿</item>
+    </string-array>
+    <string-array name="avengers_array">
+        <item>Thor</item>
+        <item>Capitan America</item>
+        <item>Iron Man</item>
+        <item>Spider-Man</item>
+    </string-array>
+</resources>
