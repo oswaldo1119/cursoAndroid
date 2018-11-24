@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".formviewPager.FormViewPagerActivity">
+    <item
+        android:id="@+id/action_notification"
+        android:icon="@drawable/ic_menu"
+        android:title="action_notification"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/itemProfile"
+                android:title="@string/profile"
+                android:icon="@drawable/ic_perfil"
+                android:orderInCategory="1"/>
+            <item android:id="@+id/itemDatos"
+                android:title="@string/datos"
+                android:icon="@drawable/ic_startup"
+                android:orderInCategory="2"/>
+            <item android:id="@+id/itemEmail"
+                android:title="@string/email"
+                android:icon="@drawable/ic_close_envelope"
+                android:orderInCategory="2"/>
+            <item android:id="@+id/itemLogout"
+                android:title="@string/logout"
+                android:icon="@drawable/ic_logout"
+                app:showAsAction="ifRoom|withText"
+                android:orderInCategory="4"/>
+        </menu>
+    </item>
+
+</menu>

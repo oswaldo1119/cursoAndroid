@@ -8,7 +8,7 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/marvel"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -27,13 +27,17 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".activitys.emailActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity android:name=".activitys.ProfileActivity" />
         <activity
             android:name=".viewPager.ViewPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".goodviewpager.GoodViewPagerActivity"
             android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".goodviewpager.GoodViewPagerActivity"
+        <activity android:name=".formviewPager.FormViewPagerActivity" />
+        <activity android:name=".formviewPager.FormLoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

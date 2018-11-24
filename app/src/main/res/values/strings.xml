@@ -17,7 +17,7 @@
     <string name="emailVacio">Email Vacio</string>
     <string name="passwordVacio">Password vacio</string>
     <string name="errorEmailInvalido">Error email invalido</string>
-    <string name="camposVacios">Campos vacios</string>
+    <string name="camposVacios" translatable="false">Los campos no pueden estar vacios</string>
     <string name="errorPasswordInvalido">Error password invalido</string>
     <string name="profile">Profile</string>
     <string name="settings">Settings</string>
@@ -26,6 +26,14 @@
     <string name="blue">BLUE</string>
     <string name="green">GREEN</string>
     <string name="yellow">YELLOW</string>
+    <string name="apellidos">Apellidos</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="emptyString">Campo vacio</string>
+    <string name="datos">Datos</string>
+    <string name="telaraña">Telaraña</string>
+    <string name="marvel">Marvel</string>
     <string-array name="country_arrays">
         <item>México🇲🇽</item>
         <item>Malaysia 🇲🇾</item>

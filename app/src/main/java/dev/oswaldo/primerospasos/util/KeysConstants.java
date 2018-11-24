@@ -6,4 +6,5 @@ public class KeysConstants {
 
     public static final String PROFILE = "PROFILE";
     public static final String FRAGMENT_ARG_FLAG = "FRAGMENT";
+    public static final String USUARIO ="USUARIO" ;
 }
