@@ -1,6 +1,7 @@
 package dev.oswaldo.primerospasos.util;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.CircularProgressDrawable;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -56,17 +58,17 @@ public class Util {
         changeActivity(activity, aClass, null);
     }
 
-    /*private void setUpImageView(){
-        CircularProgressDrawable circularProgressDrawable = new CircularProgressDrawable(this);
+    public void setUpImageView(Context context, ImageView imageViewLoad, String url){
+        CircularProgressDrawable circularProgressDrawable = new CircularProgressDrawable(context);
         circularProgressDrawable.setStrokeWidth(20f);
         circularProgressDrawable.setCenterRadius(60f);
-        circularProgressDrawable.setColorFilter(ContextCompat.getColor(this,R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
+        circularProgressDrawable.setColorFilter(ContextCompat.getColor(context,R.color.colorAccent), PorterDuff.Mode.SRC_ATOP);
         circularProgressDrawable.start();
-        Glide.with(this)
-                .load("https://i.pinimg.com/originals/56/b7/64/56b7642388e52d62910a8806a18e10be.gif")
+        Glide.with(context)
+                .load(url)
                 .fitCenter()
                 .placeholder(circularProgressDrawable)
                 .crossFade(5000)
                 .into(imageViewLoad);
-    }*/
+    }
 }
