@@ -12,4 +12,5 @@ public class KeysConstants {
     public static final int EDIT_MODE = 2;
     public static final String DOG_SHOP_ID = "dogShopID";
     public static final int CREATE_MODE = 1;
+    public static String message = "MESSAGE";
 }

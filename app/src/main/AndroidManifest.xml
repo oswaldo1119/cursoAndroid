@@ -6,13 +6,13 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".PrimerosPasos"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/marvel"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".PrimerosPasos">
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
@@ -39,15 +39,23 @@
         <activity android:name=".formviewPager.FormViewPagerActivity" />
         <activity
             android:name=".formviewPager.FormLoginActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".database.RealmRecyclerSampleActivity">
+            android:screenOrientation="portrait" />
+        <activity android:name=".database.RealmRecyclerSampleActivity" />
+        <activity android:name=".database.EditShopActivity" />
+        <activity android:name=".notificationssample.NotificationsActivity" />
+        <activity android:name=".notificationssample.FirstActivity" />
+        <activity android:name=".webview.WebViewSampleActivity">
+
+        </activity>
+        <activity android:name=".mediaplayer.MusicActivity" >
+        </activity>
+        <activity android:name=".mediaplayer.VideoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".database.EditShopActivity"></activity>
     </application>
 
 </manifest>

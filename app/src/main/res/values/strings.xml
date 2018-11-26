@@ -40,6 +40,11 @@
     <string name="empty_fields">Empty fields</string>
     <string name="empty_name">Empty name</string>
     <string name="empty_address">Empty address</string>
+    <string name="empty_input_message">Empty input message</string>
+    <string name="insert_a_message_to_send">Insert a message to send</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
     <string-array name="country_arrays">
         <item>México🇲🇽</item>
         <item>Malaysia 🇲🇾</item>
