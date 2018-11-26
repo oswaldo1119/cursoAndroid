@@ -71,4 +71,24 @@ public class Util {
                 .crossFade(5000)
                 .into(imageViewLoad);
     }
+
+    public static int getRandomNumber(){
+        return  (int)(Math.random()*((3-1)+1))+1;
+    }
+
+    public static int getRandomID(){
+        return  (int)(Math.random()*((30000-1)+1))+1;
+    }
+
+    public static String setRandomImage(){
+        switch (Util.getRandomNumber()){
+            case 1:
+                return "http://www.infoperros.net/photos/images/perros/perros-famosos/frank-1.jpg";
+            case 2:
+                return "https://barkpost.com/wp-content/uploads/2014/11/lavadogshawaii.jpg";
+            case 3:
+                return "https://vignette.wikia.nocookie.net/familyguybeta/images/e/e9/Brian_Griffin.jpg/revision/latest?cb=20091118173720&path-prefix=es";
+        }
+        return "";
+    }
 }
