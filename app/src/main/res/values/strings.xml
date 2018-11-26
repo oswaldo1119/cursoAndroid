@@ -34,6 +34,12 @@
     <string name="datos">Datos</string>
     <string name="telaraña">Telaraña</string>
     <string name="marvel">Marvel</string>
+    <string name="address">Dirección</string>
+    <string name="name">Nombre</string>
+    <string name="end">Finalizar</string>
+    <string name="empty_fields">Empty fields</string>
+    <string name="empty_name">Empty name</string>
+    <string name="empty_address">Empty address</string>
     <string-array name="country_arrays">
         <item>México🇲🇽</item>
         <item>Malaysia 🇲🇾</item>

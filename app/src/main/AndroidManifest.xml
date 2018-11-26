@@ -11,7 +11,8 @@
         android:label="@string/marvel"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".PrimerosPasos">
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
@@ -34,12 +35,11 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".goodviewpager.GoodViewPagerActivity"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity android:name=".formviewPager.FormViewPagerActivity" />
         <activity
             android:name=".formviewPager.FormLoginActivity"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".database.RealmRecyclerSampleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,6 +47,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".database.EditShopActivity"></activity>
     </application>
 
 </manifest>

@@ -17,10 +17,11 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import dev.oswaldo.primerospasos.R;
 import dev.oswaldo.primerospasos.database.model.DogShop;
+import io.realm.RealmList;
 
 public class DogShopAdapter extends RecyclerView.Adapter<DogShopAdapter.ViewHolderAdapter> {
 
-    List<DogShop> dogShops;
+    RealmList<DogShop> dogShops;
 
     Context adapterContext;
 
@@ -28,7 +29,7 @@ public class DogShopAdapter extends RecyclerView.Adapter<DogShopAdapter.ViewHold
 
     DogShopLongClick dogShopLongClick;
 
-    public DogShopAdapter(List<DogShop> dogShops, Context adapterContext, DogShopClick dogShopClick, DogShopLongClick dogShopLongClick) {
+    public DogShopAdapter(RealmList<DogShop> dogShops, Context adapterContext, DogShopClick dogShopClick, DogShopLongClick dogShopLongClick) {
         this.dogShops = dogShops;
         this.adapterContext = adapterContext;
         this.dogShopClick = dogShopClick;
