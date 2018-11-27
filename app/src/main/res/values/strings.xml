@@ -67,4 +67,5 @@
         <item>Iron Man</item>
         <item>Spider-Man</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 </resources>
