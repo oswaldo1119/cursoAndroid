@@ -45,6 +45,12 @@
     <string name="play">Play</string>
     <string name="pause">Pause</string>
     <string name="stop">Stop</string>
+    <string name="zoom">Zoom</string>
+    <string name="clockwise">Clockwise</string>
+    <string name="fade">Fade</string>
+    <string name="blink">Blink</string>
+    <string name="move">Move</string>
+    <string name="slide">Slide</string>
     <string-array name="country_arrays">
         <item>México🇲🇽</item>
         <item>Malaysia 🇲🇾</item>
