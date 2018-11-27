@@ -44,12 +44,12 @@
         <activity android:name=".database.EditShopActivity" />
         <activity android:name=".notificationssample.NotificationsActivity" />
         <activity android:name=".notificationssample.FirstActivity" />
-        <activity android:name=".webview.WebViewSampleActivity">
-
-        </activity>
-        <activity android:name=".mediaplayer.MusicActivity" >
-        </activity>
+        <activity android:name=".webview.WebViewSampleActivity"></activity>
+        <activity android:name=".mediaplayer.MusicActivity"></activity>
         <activity android:name=".mediaplayer.VideoActivity">
+        </activity>
+        <activity android:name=".recyclerjusticeleague.JusticeLeagueActivity"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
