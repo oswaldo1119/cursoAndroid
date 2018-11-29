@@ -46,7 +46,8 @@
         <activity android:name=".formviewPager.FormViewPagerActivity" />
         <activity
             android:name=".formviewPager.FormLoginActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait">
+        </activity>
         <activity android:name=".database.RealmRecyclerSampleActivity" />
         <activity android:name=".database.EditShopActivity" />
         <activity android:name=".notificationssample.NotificationsActivity" />
@@ -78,10 +79,13 @@
 
         <activity android:name=".location.MapsActivity" />
         <activity android:name=".geofences.GeoFencesActivity" />
-        <activity android:name=".acelerometer.AcelerometerActivity"></activity>
-        <activity android:name=".camera.CameraActivity">
-        </activity>
-        <activity android:name=".ws.WebServiceSamplesActivity">
+        <activity android:name=".acelerometer.AcelerometerActivity" />
+        <activity android:name=".camera.CameraActivity"></activity>
+        <activity android:name=".ws.WebServiceSamplesActivity"></activity>
+        <activity
+            android:name=".main.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

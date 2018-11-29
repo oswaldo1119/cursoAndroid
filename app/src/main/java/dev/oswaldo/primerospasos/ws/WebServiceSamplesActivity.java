@@ -16,6 +16,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import dev.oswaldo.primerospasos.R;
 import dev.oswaldo.primerospasos.ws.wsmodels.StarWarsCharacterResponse;
+import dev.oswaldo.primerospasos.ws.wsmodels.UserResponse;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,7 +33,31 @@ public class WebServiceSamplesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_service_samples);
         ButterKnife.bind(this);
+        postMethod();
     }
+
+    private void postMethod() {
+        Client client = ServiceLoggingGenerator.createService(Client.class);
+        client.login("hola@uble.mx", "sachubab13")
+                .enqueue(new Callback<UserResponse>() {
+                    @Override
+                    public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
+                        if (response.code() == 200) {
+                            UserResponse user = response.body();
+                            mTvPokemonInfo.setText(user.getUserInfo().getEmail());
+                        } else{
+                            mTvPokemonInfo.setText("Error code: "+response.code());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<UserResponse> call, Throwable t) {
+                        mTvPokemonInfo.setText("Error!!!!!! ");
+                        t.printStackTrace();
+                    }
+                });
+    }
+
 
     @OnClick(R.id.buttonObtener) public void getCharacter(View view){
         String input = mEtPokemonID.getText().toString();

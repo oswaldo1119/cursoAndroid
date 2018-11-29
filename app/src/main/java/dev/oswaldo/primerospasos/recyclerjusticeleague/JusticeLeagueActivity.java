@@ -81,4 +81,10 @@ public class JusticeLeagueActivity extends AppCompatActivity {
         mHeroesRecyclerView.setAdapter(heroesAdapter);
         mHeroesRecyclerView.setLayoutManager(linearLayoutManager);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

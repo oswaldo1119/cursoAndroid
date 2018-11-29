@@ -18,6 +18,12 @@ import dev.oswaldo.primerospasos.activitys.emailActivity;
 import dev.oswaldo.primerospasos.util.KeysConstants;
 import dev.oswaldo.primerospasos.util.Util;
 import dev.oswaldo.primerospasos.util.ValidInput;
+import dev.oswaldo.primerospasos.ws.Client;
+import dev.oswaldo.primerospasos.ws.ServiceLoggingGenerator;
+import dev.oswaldo.primerospasos.ws.wsmodels.UserResponse;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class FormLoginActivity extends AppCompatActivity {
 
@@ -50,15 +56,39 @@ public class FormLoginActivity extends AppCompatActivity {
             Util.showSnackBar(view, getString(R.string.camposVacios));
         }
         else if(areValidInputs()){
-            Util.showSnackBar(view, "Login success");
-            Intent intent = new Intent(FormLoginActivity.this, FormViewPagerActivity.class);
-            Usuario usuario = new Usuario(mEditTextNombre.getText().toString()
-                    , mEditTextApellidos.getText().toString()
-                    , mEditTextEmail.getText().toString()
-                    , mEditTextPassword.getText().toString());
-            intent.putExtra(KeysConstants.USUARIO, usuario);
-            startActivity(intent);
-            FormLoginActivity.this.finish();
+            Client client = ServiceLoggingGenerator.createService(Client.class);
+            client.login(mEditTextEmail.getText().toString(), mEditTextPassword.getText().toString())
+                    .enqueue(new Callback<UserResponse>() {
+                        @Override
+                        public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
+                            UserResponse user = response.body();
+                            if (user.getSuccess() == 1) {
+                                Util.showSnackBar(view, "Login success");
+                                Intent intent = new Intent(FormLoginActivity.this, FormViewPagerActivity.class);
+                                Usuario usuario = new Usuario(user.getUserInfo().getName()
+                                        , user.getUserInfo().getLastName()
+                                        , user.getUserInfo().getEmail()
+                                        , mEditTextPassword.getText().toString());
+                                /*Usuario usuario = new Usuario(mEditTextNombre.getText().toString()
+                                        , mEditTextApellidos.getText().toString()
+                                        , mEditTextEmail.getText().toString()
+                                        , mEditTextPassword.getText().toString());*/
+                                intent.putExtra(KeysConstants.USUARIO, usuario);
+                                startActivity(intent);
+                                FormLoginActivity.this.finish();
+                            }
+                            else {
+                                Util.showSnackBar(view, "Error " + response.code());
+                            }
+                        }
+
+                        @Override
+                        public void onFailure(Call<UserResponse> call, Throwable t) {
+                            Util.showSnackBar(view, "Error!!!!");
+                            t.printStackTrace();
+                        }
+                    });
+
         }
     }
 

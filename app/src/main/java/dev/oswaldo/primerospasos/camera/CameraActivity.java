@@ -188,4 +188,10 @@ public class CameraActivity extends AppCompatActivity {
         }
         return  Bitmap.createScaledBitmap(bm, width, height, true);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

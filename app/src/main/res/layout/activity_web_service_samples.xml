@@ -17,6 +17,7 @@
         android:hint="Star Wars Id"
         android:inputType="number"
         android:imeOptions="actionDone"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
